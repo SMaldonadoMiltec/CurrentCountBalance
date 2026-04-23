@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using CurrentAccountBalance_Mark1.Views;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace CurrentAccountBalance_Mark1
 {
@@ -7,11 +8,14 @@ namespace CurrentAccountBalance_Mark1
         public App()
         {
             InitializeComponent();
+            MainPage = new NavigationPage(new ListaDivida());
         }
-
+        /*
         protected override Window CreateWindow(IActivationState? activationState)
         {
             return new Window(new AppShell());
+
         }
+        */
     }
 }
